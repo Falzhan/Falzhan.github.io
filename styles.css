@@ -6,10 +6,10 @@
 }
 
 :root {
-    --primary: #1c3321;  /* Dark green: backgrounds, text */
-    --accent: #02755c;   /* Teal: buttons, borders */
-    --highlight: #06d6a0; /* Mint: links, badges */
-    --light: #f0f3bd;    /* Cream: cards, secondary bg */
+    --primary: #1c3321;
+    --accent: #02755c;
+    --highlight: #06d6a0;
+    --light: #f0f3bd;
     --white: #ffffff;
     --shadow: 0 4px 8px rgba(0,0,0,0.1);
     --nav-height: 3rem;
@@ -22,12 +22,12 @@ body {
     line-height: 1.6;
     min-height: 100vh;
     padding-top: var(--nav-height);
-    overflow-x: hidden; /* Prevent horizontal scroll issues */
+    overflow-x: hidden;
 }
 
 main {
     position: relative;
-    z-index: 5; /* Ensure main content is visible */
+    z-index: 5;
 }
 
 html {
@@ -58,7 +58,7 @@ h2 {
 }
 
 .projects h2 {
-    color: var(--light); /* Light color for projects title on dark background */
+    color: var(--light);
 }
 
 h3 {
@@ -81,6 +81,14 @@ a:hover {
     text-decoration: underline;
 }
 
+/* Section Divider */
+.section-divider {
+    width: 1200px;
+    height: 1px;
+    background: var(--accent);
+    margin: 3rem auto;
+}
+
 /* Header/Hero Section */
 .hero {
     min-height: calc(100vh - var(--nav-height));
@@ -88,7 +96,7 @@ a:hover {
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
-    padding-left: 10%; /* Increased from 5% to move content more to the right; edit this value to adjust positioning */
+    padding-left: 10%;
     background-image: url('bg1.jpg');
     background-size: cover;
     background-position: center;
@@ -96,7 +104,6 @@ a:hover {
     position: relative;
 }
 
-/* Remove any pseudo-elements that might create gradients */
 .hero::before,
 .hero::after {
     display: none;
@@ -107,15 +114,15 @@ a:hover {
     z-index: 2;
     padding: 2rem 2rem 2rem 0;
     max-width: 600px;
-    text-align: center; /* Center-align text while block is on left */
-    margin-top: -80px; /* Slightly higher to better center the h1 */
+    text-align: center;
+    margin-top: -80px;
 }
 
 .nav {
     position: fixed;
     top: 0;
-    left: 0; /* Ensure navbar starts from left edge */
-    right: 0; /* Ensure navbar extends to right edge */
+    left: 0;
+    right: 0;
     width: 100%;
     background: var(--highlight);
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
@@ -134,7 +141,7 @@ a:hover {
 .nav-logo {
     display: flex;
     align-items: center;
-    order: 1; /* Logo always on left */
+    order: 1;
 }
 
 .nav-logo a {
@@ -152,7 +159,7 @@ a:hover {
 }
 
 .nav-logo img {
-    height: 2rem;
+    height: 3rem;
     width: auto;
     transition: opacity 0.3s ease;
 }
@@ -167,7 +174,7 @@ a:hover {
     justify-content: flex-end;
     padding: 0;
     margin: 0;
-    order: 2; /* Menu always on right */
+    order: 2;
 }
 
 .nav li {
@@ -228,6 +235,14 @@ a:hover {
     color: var(--light);
 }
 
+.cta-buttons {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1rem;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
 .cta-button {
     display: inline-block;
     background: var(--accent);
@@ -235,8 +250,8 @@ a:hover {
     padding: 1rem 2rem;
     border-radius: 5px;
     font-size: 1.2rem;
-    margin-top: 1rem;
     transition: background 0.3s, transform 0.3s;
+    text-decoration: none;
 }
 
 .cta-button:hover {
@@ -245,11 +260,19 @@ a:hover {
     text-decoration: none;
 }
 
+.cta-button.hire-me {
+    background: var(--highlight);
+}
+
+.cta-button.hire-me:hover {
+    background: var(--accent);
+}
+
 /* Sections General */
 section {
     padding: 4rem 0;
     position: relative;
-    z-index: 5; /* Ensure sections are visible above any overlays */
+    z-index: 5;
 }
 
 /* Navbar Burger Menu */
@@ -262,7 +285,7 @@ section {
     flex-direction: column;
     cursor: pointer;
     padding: 0.5rem;
-    order: 3; /* Burger menu hidden on desktop */
+    order: 3;
 }
 
 .nav-toggle-label span {
@@ -270,13 +293,13 @@ section {
     height: 3px;
     background: var(--primary);
     margin: 3px 0;
-    transition: 0
+    transition: 0.3s;
 }
 
-.about, .skills, .contact {
+.about, .skills, .contact-hobbies {
     background: var(--light);
-    margin-top: 0rem; /* Extend further up to create sharper cut effect */
-    padding-top: 8rem; /* Compensate for the negative margin */
+    margin-top: 0rem;
+    padding-top: 8rem;
 }
 
 .projects {
@@ -308,12 +331,10 @@ section {
     animation: rotate 20s infinite linear;
 }
 
-/* Hidden checkbox for toggle */
 #profile-toggle {
     display: none;
 }
 
-/* Click Me Button */
 .click-me-btn {
     position: absolute;
     top: 50%;
@@ -337,7 +358,6 @@ section {
     transform: translate(-50%, -50%) scale(1.1);
 }
 
-/* Static profile image */
 .static-profile {
     width: 200px;
     height: 200px;
@@ -357,7 +377,6 @@ section {
     transform: scale(1.05);
 }
 
-/* Cube and button default state */
 .profile-img .cube {
     opacity: 1;
     transition: opacity 0.5s ease;
@@ -368,7 +387,6 @@ section {
     transition: opacity 0.5s ease;
 }
 
-/* When checkbox is checked, fade out cube and button, fade in static image */
 #profile-toggle:checked ~ .cube {
     opacity: 0;
     pointer-events: none;
@@ -517,19 +535,29 @@ section {
     display: flex;
     gap: 1rem;
     margin-top: 1rem;
+    justify-content: center;
 }
 
-.project-links a {
+.project-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
     background: var(--accent);
     color: var(--light);
     padding: 0.5rem 1rem;
     border-radius: 4px;
     transition: background 0.3s;
+    text-decoration: none;
+    font-size: 0.9rem;
 }
 
-.project-links a:hover {
+.project-link:hover {
     background: var(--highlight);
     text-decoration: none;
+}
+
+.project-link i {
+    font-size: 1.2rem;
 }
 
 /* Skills Section */
@@ -549,78 +577,99 @@ section {
     border-radius: 20px;
     display: flex;
     align-items: center;
+    justify-content: space-between;
+    min-width: 250px;
 }
 
 .skill-level {
-    margin-left: 0.5rem;
+    margin-left: auto;
     font-weight: bold;
     color: var(--highlight);
 }
 
-/* Contact Section */
-.contact-form {
+/* Contact and Hobbies Section */
+.contact-hobbies {
+    background: var(--light);
+}
+
+.hobbies-contacts {
+    display: flex;
+    justify-content: space-between;
+    gap: 4rem;
+    margin-top: -10rem;
+    margin-bottom: 5rem;
+}
+
+.hobbies-content, .contact-content {
+    flex: 1;
+}
+
+.contact-hobbies h2 {
+    font-size: 2.5rem;
+    color: var(--accent);
+}
+
+
+.hobbies-content h3, .contact-content h3 {
+    font-size: 2.5rem;
+    color: var(--accent);
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+.hobbies-paragraph {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: var(--primary);
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.contact-info {
     display: flex;
     flex-direction: column;
-    max-width: 500px;
-    margin: 0 auto 2rem;
-    gap: 1rem;
+    gap: 1.5rem;
+    max-width: 600px;
+    margin: 0 auto;
 }
 
-.contact-form label {
+.contact-item {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 0.5rem 0;
+    color: var(--primary);
+}
+
+.contact-icon {
+    font-size: 1.8rem;
+    color: var(--accent);
+    width: 30px;
+    text-align: center;
+}
+
+.contact-detail {
     font-weight: bold;
     color: var(--primary);
-}
-
-.contact-form input,
-.contact-form textarea {
-    padding: 0.75rem;
-    border: 1px solid var(--accent);
-    border-radius: 4px;
-    font-family: inherit;
-    color: var(--primary);
-}
-
-.contact-form textarea {
-    resize: vertical;
-    min-height: 100px;
-}
-
-.contact-form button[type="submit"] {
-    background: var(--highlight);
-    color: var(--primary);
-    padding: 1rem;
-    border: none;
-    border-radius: 4px;
     font-size: 1.1rem;
-    cursor: pointer;
-    transition: background 0.3s;
 }
 
-.contact-form button[type="submit"]:hover {
-    background: var(--accent);
-}
-
-.social-links {
-    display: flex;
-    justify-content: center;
-    gap: 2rem;
-    flex-wrap: wrap;
-}
-
-.social-links a {
-    background: var(--accent);
-    color: var(--light);
-    padding: 0.5rem 1rem;
-    border-radius: 4px;
-    transition: background 0.3s;
-}
-
-.social-links a:hover {
-    background: var(--highlight);
+.contact-link {
+    color: var(--highlight);
     text-decoration: none;
+    font-weight: bold;
+    font-size: 1.1rem;
+}
+
+.contact-link:hover {
+    text-decoration: underline;
 }
 
 /* Footer */
+.footer p {
+    color: var(--white);
+}
 .footer {
     background: var(--primary);
     color: var(--light);
@@ -634,17 +683,28 @@ section {
 }
 
 /* Responsive Design */
+@media (max-width: 768px) {
+    .hobbies-contacts {
+        flex-direction: column;
+        gap: 1rem;
+    }
+    
+    .hobbies-content h3, .contact-content h3 {
+        font-size: 2rem;
+    }
+}
+
 @media (min-width: 768px) {
     .projects-grid {
         grid-template-columns: repeat(2, 1fr);
     }
     
     .nav-logo {
-        order: 1; /* Logo back to left on desktop */
+        order: 1;
     }
     
     .nav-toggle-label {
-        order: 3; /* Keep burger hidden on desktop */
+        order: 3;
     }
     
     .hero-content h1 {
@@ -754,8 +814,8 @@ section {
     }
     
     .hero {
-        padding-left: 2rem; /* Adjust for mobile */
-        align-items: center; /* Center content block on mobile */
+        padding-left: 2rem;
+        align-items: center;
         text-align: center;
     }
     
@@ -769,18 +829,13 @@ section {
         animation: typing 3s steps(17, end), blink-caret 0.75s step-end infinite;
     }
     
-    .social-links {
-        flex-direction: column;
-        align-items: center;
-    }
-    
     .project-links {
         flex-direction: column;
     }
     
-    .about, .skills, .contact {
+    .about, .skills, .contact-hobbies {
         margin-top: 0;
-        padding-top: 4rem;
+        padding-top: 1rem;
     }
 
     .about-content {
