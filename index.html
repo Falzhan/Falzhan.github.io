@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Zhander's Portfolio</title>
+    <!-- Add Font Awesome Library -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -35,7 +37,10 @@
                 <h1>Hi, I'm Zhander</h1>
             </div>
             <p class="tagline">Backend Developer, Designer, Server Manager, & a Media Editor</p>
-            <a href="#projects" class="cta-button">View My Work</a>
+            <div class="cta-buttons">
+                <a href="#projects" class="cta-button">View My Work</a>
+                <a href="mailto:zhander.montefalcon@msugensan.edu.ph" class="cta-button hire-me">Hire Me</a>
+            </div>
         </div>
     </header>
 
@@ -71,6 +76,8 @@
                         <img src="profile-real.png" alt="Zhander's Profile" class="static-profile">
                     </div>
                 </div>
+                
+                
                 <div class="education">
                     <h3>Education</h3>
                     <div class="education-list">
@@ -99,49 +106,48 @@
             <div class="container">
                 <h2>Projects</h2>
                 <div class="projects-grid">
-                    <!-- Project Card 1 -->
                     <article class="project-card">
-                        <h3>Backend API System</h3>
-                        <p>A robust RESTful API built with modern backend technologies for handling complex data operations and user management.</p>
+                        <h3>Anime Episode Renamer</h3>
+                        <p>Rename your downloaded anime episodes, scraping from MyAnimeList</p>
                         <ul class="tech-stack">
-                            <li>Node.js</li>
-                            <li>Express</li>
+                            <li>HTML 67.2%</li>
+                            <li>TeX 29.1%</li>
+                            <li>Python 3.7%</li>
+                        </ul>
+                        <div class="project-links">
+                            <a href="https://github.com/Falzhan/AnimeEP_Renamer" target="_blank" class="project-link github">
+                                <i class="fa fa-github"></i> GitHub
+                            </a>
+                        </div>
+                    </article>
+                    <article class="project-card">
+                        <h3>LappyFind Laptop Megathread</h3>
+                        <p>All in one laptop hub for your browsing & purchasing needs</p>
+                        <ul class="tech-stack">
                             <li>MongoDB</li>
+                            <li>Express</li>
+                            <li>React</li>
+                            <li>NodeJS</li>
                         </ul>
                         <div class="project-links">
-                            <a href="#" target="_blank">GitHub</a>
-                            <a href="#" target="_blank">Live Demo</a>
+                            <a href="https://github.com/Falzhan/LappyFind" target="_blank" class="project-link github">
+                                <i class="fa fa-github"></i> GitHub
+                            </a>
                         </div>
                     </article>
-                    <!-- Project Card 2 -->
                     <article class="project-card">
-                        <h3>Media Management Tool</h3>
-                        <p>A comprehensive media editing and management platform with advanced processing capabilities and intuitive user interface.</p>
+                        <h3>BuwuSIT Minecraft Server</h3>
+                        <p>My personally managed Minecraft server, with up to 20 players</p>
                         <ul class="tech-stack">
-                            <li>Python</li>
-                            <li>Django</li>
-                            <li>FFmpeg</li>
+                            <li>Java 1.20.4</li>
+                            <li>Deprecated</li>
                         </ul>
                         <div class="project-links">
-                            <a href="#" target="_blank">GitHub</a>
-                            <a href="#" target="_blank">Live Demo</a>
+                            <a href="https://web.facebook.com/share/v/1CJvGHG4L4/" target="_blank" class="project-link facebook">
+                                <i class="fa fa-facebook"></i> Facebook
+                            </a>
                         </div>
                     </article>
-                    <!-- Project Card 3 -->
-                    <article class="project-card">
-                        <h3>Server Infrastructure</h3>
-                        <p>Automated server deployment and monitoring system with containerization support and cloud integration.</p>
-                        <ul class="tech-stack">
-                            <li>Docker</li>
-                            <li>Kubernetes</li>
-                            <li>AWS</li>
-                        </ul>
-                        <div class="project-links">
-                            <a href="#" target="_blank">GitHub</a>
-                            <a href="#" target="_blank">Live Demo</a>
-                        </div>
-                    </article>
-                    <!-- Add more project cards as needed -->
                 </div>
             </div>
         </section>
@@ -151,40 +157,48 @@
             <div class="container">
                 <h2>Skills</h2>
                 <ul class="skills-list">
-                    <li class="skill-item">Backend Development <span class="skill-level">Expert</span></li>
+                    <li class="skill-item">PostgreSQL Database Design <span class="skill-level">Advanced</span></li>
                     <li class="skill-item">Server Management <span class="skill-level">Advanced</span></li>
-                    <li class="skill-item">Database Design <span class="skill-level">Advanced</span></li>
-                    <li class="skill-item">API Development <span class="skill-level">Expert</span></li>
-                    <li class="skill-item">Media Editing <span class="skill-level">Intermediate</span></li>
+                    <li class="skill-item">Photo Editing <span class="skill-level">Intermediate</span></li>
+                    <li class="skill-item">Video Editing <span class="skill-level">Advanced</span></li>
+                    <li class="skill-item">Backend Development <span class="skill-level">Intermediate</span></li>
                     <li class="skill-item">UI/UX Design <span class="skill-level">Intermediate</span></li>
-                    <li class="skill-item">Docker/Containers <span class="skill-level">Advanced</span></li>
-                    <li class="skill-item">Cloud Services <span class="skill-level">Intermediate</span></li>
-                    <!-- Add more skills as needed -->
+                    <li class="skill-item">Linux Environment <span class="skill-level">Intermediate</span></li>
+                    <li class="skill-item">Cloud Services <span class="skill-level">Beginner</span></li>
                 </ul>
             </div>
+    <div class="section-divider"></div>
         </section>
 
-        <!-- Contact Section -->
-        <section id="contact" class="contact">
+        <!-- Contact & Hobbies Section -->
+        <section id="contact" class="contact-hobbies">
             <div class="container">
-                <h2>Contact</h2>
-                <form class="contact-form"> <!-- Note: For GitHub Pages, integrate with external service like Formspree -->
-                    <label for="name">Name:</label>
-                    <input type="text" id="name" name="name" placeholder="Your Name" required>
-                    
-                    <label for="email">Email:</label>
-                    <input type="email" id="email" name="email" placeholder="your@email.com" required>
-                    
-                    <label for="message">Message:</label>
-                    <textarea id="message" name="message" placeholder="Tell me about your project..." rows="5" required></textarea>
-                    
-                    <button type="submit">Send Message</button>
-                </form>
-                <div class="social-links">
-                    <a href="#" target="_blank">LinkedIn</a>
-                    <a href="#" target="_blank">GitHub</a>
-                    <a href="mailto:your.email@example.com">Email</a>
-                    <!-- Add more social links as needed -->
+                <div class="hobbies-contacts">
+                    <div class="hobbies-content">
+                        <h3>Hobbies</h3>
+                        <p class="hobbies-paragraph">
+                            In my free time, I enjoy playing tabletop games and rhythm games at the arcade.
+                            I also love playing acoustic guitar and collecting audiophile audio gear.
+                            When the weather's nice, you'll find me riding my motorcycle and exploring new roads.
+                        </p>
+                    </div>
+                    <div class="contact-content">
+                        <h3>Contact</h3>
+                        <div class="contact-info">
+                            <div class="contact-item">
+                                <i class="fa fa-mobile contact-icon"></i>
+                                <span class="contact-detail">Mobile Number: 099123456789</span>
+                            </div>
+                            <div class="contact-item">
+                                <i class="fa fa-facebook contact-icon"></i>
+                                <a href="https://web.facebook.com/jake.monteverde.5264382/?_rdc=1&_rdr#" target="_blank" class="contact-link">Facebook: Zhander</a>
+                            </div>
+                            <div class="contact-item">
+                                <i class="fa fa-envelope contact-icon"></i>
+                                <span class="contact-detail">Email: zhander.montefalcon@msugensan.edu.ph</span>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
@@ -193,7 +207,7 @@
     <!-- Footer -->
     <footer class="footer">
         <div class="container">
-            <p>&copy; 2024 Zhander. All rights reserved.</p>
+            <p>&copy; 2025 Zhander. All rights reserved.</p>
             <a href="#top">Back to Top</a>
         </div>
     </footer>
