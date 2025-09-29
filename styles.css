@@ -293,9 +293,61 @@ section {
 }
 
 .profile-img {
-    max-width: 200px;
-    border-radius: 50%;
+    width: 200px;
+    height: 200px;
+    perspective: 1000px;
+    margin: 0 auto;
+}
+
+.profile-img .cube {
+    width: 200px;
+    height: 200px;
+    position: relative;
+    transform-style: preserve-3d;
+    animation: rotate 20s infinite linear;
+}
+
+.profile-img .face {
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    background-image: url('profile.jpg');
+    background-size: cover;
+    background-position: center;
     border: 3px solid var(--accent);
+}
+
+.profile-img .front {
+    transform: rotateY(0deg) translateZ(100px);
+}
+
+.profile-img .back {
+    transform: rotateY(180deg) translateZ(100px);
+}
+
+.profile-img .right {
+    transform: rotateY(90deg) translateZ(100px);
+}
+
+.profile-img .left {
+    transform: rotateY(-90deg) translateZ(100px);
+}
+
+.profile-img .top {
+    transform: rotateX(90deg) translateZ(100px);
+}
+
+.profile-img .bottom {
+    transform: rotateX(-90deg) translateZ(100px);
+}
+
+@keyframes rotate {
+    0% {
+        transform: rotateX(0deg) rotateY(0deg);
+    }
+    100% {
+        transform: rotateX(360deg) rotateY(360deg);
+    }
 }
 
 .about-text {
