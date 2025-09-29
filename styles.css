@@ -270,12 +270,12 @@ section {
     height: 3px;
     background: var(--primary);
     margin: 3px 0;
-    transition: 0.3s;
+    transition: 0
 }
 
 .about, .skills, .contact {
     background: var(--light);
-    margin-top: -4rem; /* Extend further up to create sharper cut effect */
+    margin-top: 0rem; /* Extend further up to create sharper cut effect */
     padding-top: 8rem; /* Compensate for the negative margin */
 }
 
@@ -293,10 +293,11 @@ section {
 }
 
 .profile-img {
-    width: 200px;
-    height: 200px;
+    width: 300px;
+    height: 300px;
     perspective: 1000px;
     margin: 0 auto;
+    position: relative;
 }
 
 .profile-img .cube {
@@ -305,6 +306,81 @@ section {
     position: relative;
     transform-style: preserve-3d;
     animation: rotate 20s infinite linear;
+}
+
+/* Hidden checkbox for toggle */
+#profile-toggle {
+    display: none;
+}
+
+/* Click Me Button */
+.click-me-btn {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 10;
+    background: var(--highlight);
+    color: var(--primary);
+    padding: 0.75rem 1.5rem;
+    border-radius: 25px;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+    transition: all 0.3s ease;
+    pointer-events: auto;
+}
+
+.click-me-btn:hover {
+    background: var(--accent);
+    color: var(--light);
+    transform: translate(-50%, -50%) scale(1.1);
+}
+
+/* Static profile image */
+.static-profile {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid var(--accent);
+    cursor: pointer;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    transition: opacity 0.5s ease, transform 0.3s ease;
+    z-index: 3;
+}
+
+.static-profile:hover {
+    transform: scale(1.05);
+}
+
+/* Cube and button default state */
+.profile-img .cube {
+    opacity: 1;
+    transition: opacity 0.5s ease;
+}
+
+.click-me-btn {
+    opacity: 1;
+    transition: opacity 0.5s ease;
+}
+
+/* When checkbox is checked, fade out cube and button, fade in static image */
+#profile-toggle:checked ~ .cube {
+    opacity: 0;
+    pointer-events: none;
+}
+
+#profile-toggle:checked ~ .click-me-btn {
+    opacity: 0;
+    pointer-events: none;
+}
+
+#profile-toggle:checked ~ .static-profile {
+    opacity: 1;
 }
 
 .profile-img .face {
