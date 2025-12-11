@@ -1,58 +1,254 @@
 {
   "data": [
     {
-      "id": "1",
-      "name": "Tiger Nixon",
-      "position": "System Architect",
-      "nationality": "Scottish",
-      "office": "Edinburgh",
-      "start_date": "2011/04/25",
-      "salary": "$320,800"
+      "name": "Falzhan",
+      "real_name": "Zhander Montefalcon",
+      "position": "Admin",
+      "course": "BS Information Tech",
+      "year": "4th Year",
+      "join_date": "2025/11/11",
+      "coords": "204, 71, -1092",
+      "uuid": "272aaf84-435e-4924-9f46-7b30221c81c9"
     },
     {
-      "id": "2",
-      "name": "Garrett Winters",
-      "position": "Accountant",
-      "nationality": "American",
-      "office": "Tokyo",
-      "start_date": "2011/07/25",
-      "salary": "$170,750"
+      "name": "Takishi",
+      "real_name": "Kenji Sato",
+      "position": "Moderator",
+      "course": "BS Computer Science",
+      "year": "3rd Year",
+      "join_date": "2025/11/11",
+      "coords": "1100, 64, 450",
+      "uuid": "a1609cf9-6b75-4dc9-9018-790676700029"
     },
     {
-      "id": "3",
-      "name": "Ashton Cox",
-      "position": "Junior Technical Author",
-      "nationality": "British",
-      "office": "San Francisco",
-      "start_date": "2009/01/12",
-      "salary": "$86,000"
+      "name": "Sen1311",
+      "real_name": "Mark Santos",
+      "position": "Moderator",
+      "course": "BS Electrical Eng",
+      "year": "2nd Year",
+      "join_date": "2025/11/07",
+      "coords": "-400, 68, 120",
+      "uuid": "23d9ff44-76db-4710-9fbc-b2ea90887624"
     },
     {
-      "id": "4",
-      "name": "Cedric Kelly",
-      "position": "Senior Javascript Developer",
-      "nationality": "Irish",
-      "office": "Edinburgh",
-      "start_date": "2012/03/29",
-      "salary": "$433,060"
+      "name": "Seiha",
+      "real_name": "Sarah Lee",
+      "position": "Builder",
+      "course": "BS Architecture",
+      "year": "3rd Year",
+      "join_date": "2025/11/11",
+      "coords": "550, 80, -300",
+      "uuid": "bf5b2091-43cc-4c13-8e2a-7479f7dc4ab2"
     },
     {
-      "id": "5",
-      "name": "Airi Satou",
-      "position": "Accountant",
-      "nationality": "Japanese",
-      "office": "Tokyo",
-      "start_date": "2008/11/28",
-      "salary": "$162,700"
+      "name": "virgomane",
+      "real_name": "Virgil Cruz",
+      "position": "Miner",
+      "course": "BS Civil Eng",
+      "year": "1st Year",
+      "join_date": "2025/11/10",
+      "coords": "12, 11, 4005",
+      "uuid": "ff2acf57-bc62-442b-b7cc-ce27a50a314a"
     },
     {
-      "id": "6",
-      "name": "Zhander Montefalcon",
-      "position": "Backend Developer",
-      "nationality": "Filipino",
-      "office": "General Santos",
-      "start_date": "2022/08/15",
-      "salary": "$120,000"
+      "name": "dolphyyy",
+      "real_name": "Daphne Go",
+      "position": "Explorer",
+      "course": "BS Nursing",
+      "year": "2nd Year",
+      "join_date": "2025/11/10",
+      "coords": "9999, 64, 9999",
+      "uuid": "047f1d5b-6973-4317-8537-d6eff581629e"
+    },
+    {
+      "name": "Orayon",
+      "real_name": "Ryan O.",
+      "position": "Redstoner",
+      "course": "BS Information Tech",
+      "year": "4th Year",
+      "join_date": "2025/11/08",
+      "coords": "-50, 63, -50",
+      "uuid": "6fc9f99e-a722-4a0c-87b3-f8dca99124e6"
+    },
+    {
+      "name": "Tenshiryuu",
+      "real_name": "Gabriel Tan",
+      "position": "Farmer",
+      "course": "BS Agriculture",
+      "year": "1st Year",
+      "join_date": "2025/11/06",
+      "coords": "300, 64, 300",
+      "uuid": "182c174d-d242-4368-a370-71e6a7c3aa4b"
+    },
+    {
+      "name": "c1tr0v",
+      "real_name": "Chris V.",
+      "position": "PvP Specialist",
+      "course": "BS Criminology",
+      "year": "3rd Year",
+      "join_date": "2025/11/04",
+      "coords": "0, 100, 0",
+      "uuid": "537e6dda-ffef-43fe-b2d2-7d46ad3ece39"
+    },
+    {
+      "name": "MXG3N3T1C5",
+      "real_name": "Max G.",
+      "position": "Miner",
+      "course": "BS Biology",
+      "year": "2nd Year",
+      "join_date": "2025/11/04",
+      "coords": "150, 12, -800",
+      "uuid": "241503a2-4fd0-4980-b3b7-52fc893b8626"
+    },
+    {
+      "name": "w4ynn",
+      "real_name": "Wayne R.",
+      "position": "Builder",
+      "course": "BS Fine Arts",
+      "year": "4th Year",
+      "join_date": "2025/11/04",
+      "coords": "-2050, 90, 120",
+      "uuid": "bede487e-00bd-4016-a0fc-e442c453f44a"
+    },
+    {
+      "name": "Hildrsleif",
+      "real_name": "Hilda M.",
+      "position": "Explorer",
+      "course": "BS Tourism",
+      "year": "1st Year",
+      "join_date": "2025/11/03",
+      "coords": "5000, 70, -200",
+      "uuid": "b78a9918-6767-493c-8b99-65be4c1c0ec7"
+    },
+    {
+      "name": "Drew_slowasf",
+      "real_name": "Andrew K.",
+      "position": "Miner",
+      "course": "BS Mechanical Eng",
+      "year": "2nd Year",
+      "join_date": "2025/11/02",
+      "coords": "30, 10, 30",
+      "uuid": "25a1f860-b73c-481b-9bf6-4f6ad6768a5c"
+    },
+    {
+      "name": "jjj3212424",
+      "real_name": "Jay J.",
+      "position": "Farmer",
+      "course": "BS Accountancy",
+      "year": "3rd Year",
+      "join_date": "2025/11/01",
+      "coords": "-600, 64, 400",
+      "uuid": "27bf5d00-e698-4da4-b117-ddbedf9c3875"
+    },
+    {
+      "name": "AnonKhotan",
+      "real_name": "Anton L.",
+      "position": "Builder",
+      "course": "BS Information Tech",
+      "year": "1st Year",
+      "join_date": "2025/11/01",
+      "coords": "120, 75, 890",
+      "uuid": "74ffbdf7-9c62-4ce0-bf07-312412585324"
+    },
+    {
+      "name": "JudeBSIT",
+      "real_name": "Jude B.",
+      "position": "Redstoner",
+      "course": "BS Information Tech",
+      "year": "2nd Year",
+      "join_date": "2025/11/01",
+      "coords": "88, 60, 202",
+      "uuid": "6efc49ee-09da-458a-905f-505f28dd7a09"
+    },
+    {
+      "name": "AUIE3396",
+      "real_name": "Audrey P.",
+      "position": "Explorer",
+      "course": "BS Psychology",
+      "year": "4th Year",
+      "join_date": "2025/11/01",
+      "coords": "700, 100, 700",
+      "uuid": "257b051c-d54e-473c-9e07-34f244294b48"
+    },
+    {
+      "name": "Araxthor",
+      "real_name": "Arthur D.",
+      "position": "Miner",
+      "course": "BS Geology",
+      "year": "3rd Year",
+      "join_date": "2025/10/29",
+      "coords": "15, 8, 15",
+      "uuid": "caf8bd68-557a-40d5-a967-f56c3ecbb5b8"
+    },
+    {
+      "name": "Tchxznu",
+      "real_name": "Tom C.",
+      "position": "PvP Specialist",
+      "course": "BS Criminology",
+      "year": "2nd Year",
+      "join_date": "2025/10/28",
+      "coords": "0, 80, 500",
+      "uuid": "686d714d-36c6-42fa-8c63-7fd57629624e"
+    },
+    {
+      "name": "Dureidrei",
+      "real_name": "Andrei S.",
+      "position": "Builder",
+      "course": "BS Civil Eng",
+      "year": "1st Year",
+      "join_date": "2025/10/26",
+      "coords": "-450, 70, -450",
+      "uuid": "fa2aa265-7c04-49b2-bc38-7fda0c97f087"
+    },
+    {
+      "name": "Dexdy11DDN",
+      "real_name": "Dexter Y.",
+      "position": "Farmer",
+      "course": "BS Accountancy",
+      "year": "4th Year",
+      "join_date": "2025/10/19",
+      "coords": "200, 64, 1000",
+      "uuid": "9738d178-87ad-4a4a-a82d-d2a55018afc6"
+    },
+    {
+      "name": "limmome",
+      "real_name": "Liam M.",
+      "position": "Miner",
+      "course": "BS Information Tech",
+      "year": "3rd Year",
+      "join_date": "2025/10/14",
+      "coords": "40, 12, 90",
+      "uuid": "41df7ba8-64ba-419a-ab00-e6ba7f98d4ac"
+    },
+    {
+      "name": "Keyyyyyyyy",
+      "real_name": "Kyle E.",
+      "position": "Explorer",
+      "course": "BS Marine Bio",
+      "year": "2nd Year",
+      "join_date": "2025/10/13",
+      "coords": "1500, 63, -1500",
+      "uuid": "50468398-6f0a-4fa9-84d7-b06404f3723f"
+    },
+    {
+      "name": "nasndaufbsiuf",
+      "real_name": "Nathan F.",
+      "position": "Banned",
+      "course": "N/A",
+      "year": "N/A",
+      "join_date": "2025/10/13",
+      "coords": "0, 0, 0",
+      "uuid": "8defb33d-78f4-407d-a4c9-2976f41064d8"
+    },
+    {
+      "name": "Zhonglim2022",
+      "real_name": "John Lim",
+      "position": "Builder",
+      "course": "BS Architecture",
+      "year": "4th Year",
+      "join_date": "2025/10/01",
+      "coords": "330, 90, 110",
+      "uuid": "efa10461-88a6-358a-8986-5efd1624e036"
     }
   ]
 }
