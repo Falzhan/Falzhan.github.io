@@ -147,7 +147,7 @@
                     <li><a href="index.html#about">About</a></li>
                     <li><a href="index.html#projects">Projects</a></li>
                     <li><a href="index.html#skills">Skills</a></li>
-                    <li><a href="datatables.html" class="active">DataTables</a></li>
+                    <li><a href="index.html#contact">Contact</a></li>
                 </ul>
             </div>
         </nav>
@@ -178,22 +178,24 @@
                 <table id="example1" class="table table-striped table-hover" style="width:100%">
                     <thead>
                         <tr>
-                            <th>ID</th>
                             <th>Name</th>
                             <th>Position</th>
-                            <th>Nationality</th>
-                            <th>Office</th>
-                            <th>Start Date</th>
-                            <th>Salary</th>
+                            <th>Real Name</th>
+                            <th>Course</th>
+                            <th>Year</th>
+                            <th>Join Date</th>
+                            <th>Base Coords</th>
+                            <th>UUID</th> 
                         </tr>
                         <tr class="search-inputs">
-                            <th><input type="text" class="form-control form-control-sm" placeholder="Search ID"></th>
-                            <th><input type="text" class="form-control form-control-sm" placeholder="Search Name"></th>
-                            <th><input type="text" class="form-control form-control-sm" placeholder="Search Position"></th>
-                            <th><input type="text" class="form-control form-control-sm" placeholder="Search Nation"></th>
-                            <th><input type="text" class="form-control form-control-sm" placeholder="Search Office"></th>
-                            <th><input type="text" class="form-control form-control-sm" placeholder="Search Date"></th>
-                            <th><input type="text" class="form-control form-control-sm" placeholder="Search Salary"></th>
+                             <th><input type="text" class="form-control form-control-sm" placeholder="Name"></th>
+                             <th><input type="text" class="form-control form-control-sm" placeholder="Position"></th>
+                             <th><input type="text" class="form-control form-control-sm" placeholder="Real Name"></th>
+                             <th><input type="text" class="form-control form-control-sm" placeholder="Course"></th>
+                             <th><input type="text" class="form-control form-control-sm" placeholder="Year"></th>
+                             <th><input type="text" class="form-control form-control-sm" placeholder="Date"></th>
+                             <th><input type="text" class="form-control form-control-sm" placeholder="Coords"></th>
+                             <th><input type="text" class="form-control form-control-sm" placeholder="UUID"></th>
                         </tr>
                     </thead>
                 </table>
@@ -250,13 +252,14 @@
                 var table = $(tableId).DataTable({
                     ajax: 'data.json', // 1. AJAX Source
                     columns: [
-                        { data: 'id' },
                         { data: 'name' },
                         { data: 'position' },
-                        { data: 'nationality' }, // 7 Columns including Nationality
-                        { data: 'office' },
-                        { data: 'start_date' },
-                        { data: 'salary' }
+                        { data: 'real_name' },
+                        { data: 'course' },
+                        { data: 'year' },
+                        { data: 'join_date' },
+                        { data: 'coords' },
+                        { data: 'uuid', visible: false } // Hidden column for UUID
                     ],
                     // 3. Layout Customization (DOM)
                     // 'p': pagination (top-pagination)
