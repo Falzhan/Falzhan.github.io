@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Zhander's DataTables</title>
+    <title>TableTop Co. Players</title>
     
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     
@@ -17,119 +17,176 @@
 
     <style>
         /* --- THEME OVERRIDES FOR DATATABLES --- */
-        /* Force Bootstrap to match your Dark Theme */
+        
         body {
+            /* Keep the dark identity on the outside */
             background-color: var(--primary);
-            color: var(--light);
+            color: var(--light); 
         }
 
-        .table-container {
+        /* The Main White Card - Breaks the "Green Wall" */
+        .dashboard-card {
+            background-color: var(--white);
+            color: var(--primary); /* Dark text on white bg */
+            border-radius: 0 8px 8px 8px; /* Top-left sharp for tab connection */
             padding: 2rem;
-            background: rgba(255, 255, 255, 0.05); /* Slight tint to separate from bg */
-            border-radius: 10px;
-            margin-top: 2rem;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.2);
             border: 1px solid var(--accent);
         }
 
-        /* Nav Tabs Customization */
+        /* --- NAVIGATION TABS --- */
         .nav-tabs {
-            border-bottom: 2px solid var(--accent);
+            border-bottom: none; /* The card border handles this */
+            margin-bottom: 0;
+            padding-left: 1rem;
         }
+
         .nav-tabs .nav-link {
             color: var(--light);
-            border: none;
-            margin-right: 5px;
+            background-color: rgba(2, 117, 92, 0.5); /* Accent with opacity */
+            border: 1px solid transparent;
+            margin-right: 4px;
+            border-radius: 8px 8px 0 0;
+            font-weight: bold;
+            transition: all 0.3s ease;
         }
+
         .nav-tabs .nav-link:hover {
-            border-color: transparent;
-            color: var(--highlight);
-        }
-        .nav-tabs .nav-link.active {
             background-color: var(--accent);
-            color: var(--light);
-            border-radius: 5px 5px 0 0;
+            color: var(--white);
+            border-color: transparent;
         }
 
-        /* Table Styling */
+        .nav-tabs .nav-link.active {
+            background-color: var(--white);
+            color: var(--primary); /* Dark text for active tab */
+            border-bottom: 1px solid var(--white); /* Blend into card */
+            position: relative;
+            z-index: 2; /* Sit on top of card border */
+        }
+
+        /* --- TABLE STYLING --- */
         table.dataTable {
-            color: var(--light) !important;
-        }
-        .table>:not(caption)>*>* {
-            background-color: transparent; /* Remove Bootstrap white bg */
-            color: var(--light);
-            border-bottom-color: var(--accent);
-        }
-        thead th {
-            border-bottom: 2px solid var(--highlight) !important;
-            color: var(--highlight) !important;
+            color: var(--primary) !important;
+            width: 100% !important;
         }
 
-        /* Inputs (Search fields) */
+        /* Table Header */
+        .table thead th {
+            background-color: var(--accent) !important;
+            color: var(--white) !important;
+            border-bottom: 4px solid var(--highlight) !important;
+            font-weight: 600;
+            text-transform: uppercase;
+            font-size: 0.9rem;
+            letter-spacing: 0.5px;
+        }
+
+        /* Input Fields (Search) */
+        .search-inputs th {
+            background-color: var(--white) !important;
+            padding: 10px !important;
+        }
+
         input.form-control, select.form-select {
-            background-color: var(--primary);
+            background-color: var(--light) !important; /* Pale yellow inputs */
             border: 1px solid var(--accent);
-            color: var(--light);
-        }
-        input.form-control:focus, select.form-select:focus {
-            background-color: var(--primary);
-            color: var(--highlight);
-            border-color: var(--highlight);
-            box-shadow: 0 0 0 0.25rem rgba(6, 214, 160, 0.25);
+            color: var(--primary) !important;
+            font-weight: 500;
         }
 
-        /* Pagination Styling */
-        .page-item.disabled .page-link {
-            background-color: var(--primary);
-            border-color: var(--accent);
-            color: #666;
+        input.form-control::placeholder {
+            color: rgba(28, 51, 33, 0.5);
         }
-        .page-item .page-link {
-            background-color: var(--primary);
-            border-color: var(--accent);
-            color: var(--light);
+
+        input.form-control:focus, select.form-select:focus {
+            background-color: var(--white) !important;
+            border-color: var(--highlight);
+            box-shadow: 0 0 0 3px rgba(6, 214, 160, 0.2);
         }
+
+        /* Table Rows (Striping) */
+        .table-striped > tbody > tr:nth-of-type(odd) > * {
+            background-color: rgba(240, 243, 189, 0.15); /* Very faint --light tint */
+            color: var(--primary);
+        }
+        
+        .table-hover > tbody > tr:hover > * {
+            background-color: rgba(6, 214, 160, 0.2) !important; /* Highlight color on hover */
+        }
+
+        /* Selected Row */
+        table.dataTable tbody tr.selected > * {
+            background-color: var(--primary) !important;
+            color: var(--light) !important; /* Invert colors for selection */
+            box-shadow: inset 0 0 0 9999px var(--primary) !important;
+        }
+
+        /* --- PAGINATION & BUTTONS --- */
+        .page-link {
+            background-color: var(--white);
+            color: var(--primary);
+            border-color: var(--accent);
+            font-weight: bold;
+        }
+
         .page-item.active .page-link {
             background-color: var(--accent);
             border-color: var(--accent);
             color: var(--white);
         }
+
         .page-link:hover {
             background-color: var(--highlight);
             color: var(--primary);
         }
 
-        /* Buttons (ColVis, Delete) */
-        .dt-button, .btn-danger {
-            background-color: var(--accent) !important;
+        /* Custom Button Styling */
+        .dt-button, .btn-custom {
+            background-color: var(--primary) !important;
             color: var(--light) !important;
-            border: none !important;
-        }
-        .btn-danger:hover, .dt-button:hover {
-            background-color: var(--highlight) !important;
-            color: var(--primary) !important;
+            border: 1px solid var(--highlight) !important;
+            border-radius: 4px;
+            padding: 5px 15px;
+            font-weight: bold;
+            transition: all 0.3s;
         }
 
-        /* Layout Specifics per Request */
+        .dt-button:hover, .btn-custom:hover {
+            background-color: var(--highlight) !important;
+            color: var(--primary) !important;
+            box-shadow: 0 0 10px rgba(6, 214, 160, 0.4);
+        }
+
+        .btn-danger-custom {
+            background-color: #d9534f !important;
+            color: white !important;
+            border: none;
+        }
+        .btn-danger-custom:hover {
+            background-color: #c9302c !important;
+        }
+
+        /* Layout Helpers */
         .top-pagination {
             display: flex;
-            justify-content: center; /* Page nav in top middle */
-            margin-bottom: 1rem;
+            justify-content: center;
+            margin-bottom: 1.5rem;
+            font-family: 'MonoLisa', monospace;
         }
         .bottom-controls {
             display: flex;
-            flex-direction: column;
-            align-items: flex-start; /* Lower left area */
+            justify-content: space-between;
+            align-items: center;
             margin-top: 1rem;
-        }
-        .dataTables_info {
-            padding-top: 0.5rem !important;
-            text-align: left !important;
+            border-top: 1px solid rgba(0,0,0,0.1);
+            padding-top: 1rem;
         }
     </style>
 </head>
 <body>
 
-    <header class="hero" style="min-height: auto; padding-bottom: 2rem;">
+    <header class="hero" style="min-height: auto; padding-bottom: 2rem; background: none;">
         <nav class="nav">
             <input type="checkbox" id="nav-toggle" class="nav-toggle">
             <div class="nav-container">
@@ -151,86 +208,97 @@
                 </ul>
             </div>
         </nav>
-        <div class="container" style="margin-top: 4rem; text-align: center;">
-            <h2>DataTables Implementation</h2>
-            <p>AJAX Source • Custom Layout • Bootstrap 5</p>
+        
+        <div class="container" style="margin-top: 5rem; text-align: center;">
+            <h2 style="color: var(--light); text-shadow: 0 2px 4px rgba(0,0,0,0.5);">Server Player Database</h2>
+            <p style="color: var(--highlight)">Live Roster & Coordinates</p>
         </div>
     </header>
 
-    <main class="container">
+    <main class="container pb-5">
         
-        <div class="d-flex justify-content-end mb-3 gap-2">
-            <button id="deleteRow" class="btn btn-danger">Delete Selected Row</button>
+        <div class="d-flex justify-content-end mb-0 gap-2" style="padding-right: 1rem;">
+            <button id="deleteRow" class="btn btn-custom btn-danger-custom">
+                <i class="fa fa-trash"></i> Delete Selected
+            </button>
         </div>
 
         <ul class="nav nav-tabs" id="myTab" role="tablist">
             <li class="nav-item" role="presentation">
-                <button class="nav-link active" id="tab1-tab" data-bs-toggle="tab" data-bs-target="#tab1" type="button" role="tab">Tab 1 View</button>
+                <button class="nav-link active" id="tab1-tab" data-bs-toggle="tab" data-bs-target="#tab1" type="button" role="tab">
+                    <i class="fa fa-list"></i> Standard View
+                </button>
             </li>
             <li class="nav-item" role="presentation">
-                <button class="nav-link" id="tab2-tab" data-bs-toggle="tab" data-bs-target="#tab2" type="button" role="tab">Tab 2 View</button>
+                <button class="nav-link" id="tab2-tab" data-bs-toggle="tab" data-bs-target="#tab2" type="button" role="tab">
+                    <i class="fa fa-table"></i> Detailed View
+                </button>
             </li>
         </ul>
 
-        <div class="tab-content table-container" id="myTabContent">
-            
-            <div class="tab-pane fade show active" id="tab1" role="tabpanel">
-                <table id="example1" class="table table-striped table-hover" style="width:100%">
-                    <thead>
-                        <tr>
-                            <th>Name</th>
-                            <th>Position</th>
-                            <th>Real Name</th>
-                            <th>Course</th>
-                            <th>Year</th>
-                            <th>Join Date</th>
-                            <th>Base Coords</th>
-                            <th>UUID</th> 
-                        </tr>
-                        <tr class="search-inputs">
-                             <th><input type="text" class="form-control form-control-sm" placeholder="Name"></th>
-                             <th><input type="text" class="form-control form-control-sm" placeholder="Position"></th>
-                             <th><input type="text" class="form-control form-control-sm" placeholder="Real Name"></th>
-                             <th><input type="text" class="form-control form-control-sm" placeholder="Course"></th>
-                             <th><input type="text" class="form-control form-control-sm" placeholder="Year"></th>
-                             <th><input type="text" class="form-control form-control-sm" placeholder="Date"></th>
-                             <th><input type="text" class="form-control form-control-sm" placeholder="Coords"></th>
-                             <th><input type="text" class="form-control form-control-sm" placeholder="UUID"></th>
-                        </tr>
-                    </thead>
-                </table>
-            </div>
+        <div class="dashboard-card">
+            <div class="tab-content" id="myTabContent">
+                
+                <div class="tab-pane fade show active" id="tab1" role="tabpanel">
+                    <table id="example1" class="table table-striped table-hover align-middle">
+                        <thead>
+                            <tr>
+                                <th>Name</th>
+                                <th>Position</th>
+                                <th>Real Name</th>
+                                <th>Course</th>
+                                <th>Year</th>
+                                <th>Join Date</th>
+                                <th>Base Coords</th>
+                                <th>UUID</th> 
+                            </tr>
+                            <tr class="search-inputs">
+                                 <th><input type="text" class="form-control form-control-sm" placeholder="Filter Name"></th>
+                                 <th><input type="text" class="form-control form-control-sm" placeholder="Filter Role"></th>
+                                 <th><input type="text" class="form-control form-control-sm" placeholder="Filter Real Name"></th>
+                                 <th><input type="text" class="form-control form-control-sm" placeholder="Filter Course"></th>
+                                 <th><input type="text" class="form-control form-control-sm" placeholder="Filter Year"></th>
+                                 <th><input type="text" class="form-control form-control-sm" placeholder="Filter Date"></th>
+                                 <th><input type="text" class="form-control form-control-sm" placeholder="Filter Coords"></th>
+                                 <th><input type="text" class="form-control form-control-sm" placeholder="UUID"></th>
+                            </tr>
+                        </thead>
+                    </table>
+                </div>
 
-            <div class="tab-pane fade" id="tab2" role="tabpanel">
-                <table id="example2" class="table table-striped table-hover" style="width:100%">
-                    <thead>
-                        <tr>
-                            <th>ID</th>
-                            <th>Name</th>
-                            <th>Position</th>
-                            <th>Nationality</th>
-                            <th>Office</th>
-                            <th>Start Date</th>
-                            <th>Salary</th>
-                        </tr>
-                        <tr class="search-inputs">
-                            <th><input type="text" class="form-control form-control-sm" placeholder="Search ID"></th>
-                            <th><input type="text" class="form-control form-control-sm" placeholder="Search Name"></th>
-                            <th><input type="text" class="form-control form-control-sm" placeholder="Search Position"></th>
-                            <th><input type="text" class="form-control form-control-sm" placeholder="Search Nation"></th>
-                            <th><input type="text" class="form-control form-control-sm" placeholder="Search Office"></th>
-                            <th><input type="text" class="form-control form-control-sm" placeholder="Search Date"></th>
-                            <th><input type="text" class="form-control form-control-sm" placeholder="Search Salary"></th>
-                        </tr>
-                    </thead>
-                </table>
+                <div class="tab-pane fade" id="tab2" role="tabpanel">
+                    <table id="example2" class="table table-striped table-hover align-middle" style="width:100%">
+                        <thead>
+                            <tr>
+                                <th>Name</th>
+                                <th>Position</th>
+                                <th>Real Name</th>
+                                <th>Course</th>
+                                <th>Year</th>
+                                <th>Join Date</th>
+                                <th>Base Coords</th>
+                                <th>UUID</th> 
+                            </tr>
+                            <tr class="search-inputs">
+                                 <th><input type="text" class="form-control form-control-sm" placeholder="Filter Name"></th>
+                                 <th><input type="text" class="form-control form-control-sm" placeholder="Filter Role"></th>
+                                 <th><input type="text" class="form-control form-control-sm" placeholder="Filter Real Name"></th>
+                                 <th><input type="text" class="form-control form-control-sm" placeholder="Filter Course"></th>
+                                 <th><input type="text" class="form-control form-control-sm" placeholder="Filter Year"></th>
+                                 <th><input type="text" class="form-control form-control-sm" placeholder="Filter Date"></th>
+                                 <th><input type="text" class="form-control form-control-sm" placeholder="Filter Coords"></th>
+                                 <th><input type="text" class="form-control form-control-sm" placeholder="UUID"></th>
+                            </tr>
+                        </thead>
+                    </table>
+                </div>
             </div>
         </div>
     </main>
 
-    <footer class="footer mt-5">
+    <footer class="footer mt-5" style="border-top: 1px solid var(--accent);">
         <div class="container">
-            <p>&copy; 2025 Zhander. All rights reserved.</p>
+            <p>&copy; 2025 Zhander. TableTop Co. Server Manager.</p>
         </div>
     </footer>
 
@@ -247,39 +315,39 @@
     <script>
         $(document).ready(function() {
             
-            // Function to initialize DataTables
             function initTable(tableId) {
                 var table = $(tableId).DataTable({
-                    ajax: 'data.json', // 1. AJAX Source
+                    ajax: 'data.json',
                     columns: [
-                        { data: 'name' },
+                        { data: 'name', className: 'fw-bold' },
                         { data: 'position' },
                         { data: 'real_name' },
                         { data: 'course' },
                         { data: 'year' },
                         { data: 'join_date' },
-                        { data: 'coords' },
-                        { data: 'uuid', visible: false } // Hidden column for UUID
+                        { data: 'coords', className: 'text-monospace' },
+                        { data: 'uuid', visible: false } 
                     ],
-                    // 3. Layout Customization (DOM)
-                    // 'p': pagination (top-pagination)
-                    // 'B': Buttons (ColVis)
-                    // 't': table
-                    // 'l': length changing (bottom-controls)
-                    // 'i': information (bottom-controls)
-                    dom: '<"top-pagination"p><"d-flex justify-content-end"B>rt<"bottom-controls"li>',
+                    dom: '<"top-pagination"p><"d-flex justify-content-end mb-2"B>rt<"bottom-controls"li>',
                     buttons: [
                         {
-                            extend: 'colvis', // 5. Show/Hide Columns
-                            text: 'Show/Hide Columns',
-                            className: 'btn btn-success'
+                            extend: 'colvis',
+                            text: '<i class="fa fa-columns"></i> Columns',
+                            className: 'btn btn-custom'
                         }
                     ],
-                    select: true, // 3. Can select row
-                    searching: true, // Internal searching must be true for API, but global search input is removed via DOM
-                    orderCellsTop: true, // Ensure input fields don't sort
+                    select: {
+                        style: 'single'
+                    },
+                    searching: true, 
+                    orderCellsTop: true, 
+                    language: {
+                        paginate: {
+                            previous: '<i class="fa fa-chevron-left"></i>',
+                            next: '<i class="fa fa-chevron-right"></i>'
+                        }
+                    },
                     initComplete: function () {
-                        // 4. Individual Column Searching
                         this.api().columns().every(function () {
                             var that = this;
                             $('input', this.header()).on('keyup change clear', function () {
@@ -287,14 +355,10 @@
                                     that.search(this.value).draw();
                                 }
                             });
-                            
-                            // Move inputs to the second header row (thead tr:eq(1))
-                            // Note: We manually added inputs in HTML to avoid complex JS DOM manipulation here
                         });
                     }
                 });
 
-                // Attach individual search logic specifically to the inputs we created
                 $(tableId + ' thead tr:eq(1) th').each(function (i) {
                     $('input', this).on('keyup change', function () {
                         if (table.column(i).search() !== this.value) {
@@ -306,13 +370,10 @@
                 return table;
             }
 
-            // 6. Display Table Twice in Different Tabs
             var table1 = initTable('#example1');
             var table2 = initTable('#example2');
 
-            // 3. Delete Selected Row Functionality
             $('#deleteRow').click(function () {
-                // Check which tab is active to delete from correct table
                 if($('#tab1').hasClass('active')) {
                     table1.row('.selected').remove().draw(false);
                 } else {
@@ -320,7 +381,6 @@
                 }
             });
 
-            // Fix for DataTables column width issues within hidden tabs
             $('button[data-bs-toggle="tab"]').on('shown.bs.tab', function (e) {
                 $.fn.dataTable.tables({ visible: true, api: true }).columns.adjust();
             });
