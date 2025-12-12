@@ -118,7 +118,8 @@ a:hover {
     margin-top: -80px;
 }
 
-.nav {
+/* FIXED: Changed .nav to nav.nav to avoid conflict with Bootstrap tabs */
+nav.nav {
     position: fixed;
     top: 0;
     left: 0;
@@ -177,11 +178,13 @@ a:hover {
     order: 2;
 }
 
-.nav li {
+/* FIXED: Scoped to nav.nav so it doesn't add margins to table tabs */
+nav.nav li {
     margin: 0 1rem;
 }
 
-.nav a {
+/* FIXED: Scoped to nav.nav so it doesn't break table tab links */
+nav.nav a {
     color: var(--primary);
     padding: 0.5rem 1rem;
     border-radius: 4px;
@@ -190,13 +193,13 @@ a:hover {
     border-bottom: 2px solid transparent;
 }
 
-.nav a:hover {
+nav.nav a:hover {
     color: var(--accent);
     text-decoration: none;
     border-bottom: 2px solid var(--accent);
 }
 
-.nav a.active {
+nav.nav a.active {
     color: var(--accent);
     border-bottom: 2px solid var(--accent);
 }
@@ -926,7 +929,7 @@ table.dataTable tbody tr.selected > * {
         padding: 0;
     }
     
-    .nav ul {
+    nav.nav ul {
         justify-content: flex-end;
     }
 }
@@ -958,18 +961,19 @@ table.dataTable tbody tr.selected > * {
         display: flex;
     }
     
-    .nav li {
+    /* FIXED: Scoped to nav.nav */
+    nav.nav li {
         margin: 0;
         padding: 0;
         text-align: center;
         border-bottom: 1px solid rgba(28, 51, 33, 0.1);
     }
     
-    .nav li:last-child {
+    nav.nav li:last-child {
         border-bottom: none;
     }
     
-    .nav a {
+    nav.nav a {
         display: block;
         padding: 1rem;
         border-bottom: none;
@@ -977,8 +981,8 @@ table.dataTable tbody tr.selected > * {
         transition: all 0.3s ease;
     }
     
-    .nav a:hover,
-    .nav a.active {
+    nav.nav a:hover,
+    nav.nav a.active {
         background: var(--accent);
         color: var(--light);
         border-bottom: none;
