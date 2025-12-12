@@ -231,16 +231,6 @@
       "uuid": "50468398-6f0a-4fa9-84d7-b06404f3723f"
     },
     {
-      "name": "nasndaufbsiuf",
-      "real_name": "Nathan F.",
-      "position": "Banned",
-      "course": "N/A",
-      "year": "N/A",
-      "join_date": "2025/10/13",
-      "coords": "0, 0, 0",
-      "uuid": "8defb33d-78f4-407d-a4c9-2976f41064d8"
-    },
-    {
       "name": "Zhonglim2022",
       "real_name": "John Lim",
       "position": "Builder",
@@ -249,6 +239,126 @@
       "join_date": "2025/10/01",
       "coords": "330, 90, 110",
       "uuid": "efa10461-88a6-358a-8986-5efd1624e036"
+    },
+    {
+      "name": "nasndaufbsiuf",
+      "real_name": "Nathan F.",
+      "position": "Banned",
+      "course": "N/A",
+      "year": "N/A",
+      "join_date": "2025/10/13",
+      "coords": "0, 0, 0",
+      "ban_date": "2025/10/14",
+      "ban_reason": "Griefing - Destroyed multiple player builds",
+      "uuid": "8defb33d-78f4-407d-a4c9-2976f41064d8"
+    },
+    {
+      "name": "xXGrieferXx",
+      "real_name": "Unknown",
+      "position": "Banned",
+      "course": "N/A",
+      "year": "N/A",
+      "join_date": "2025/10/20",
+      "coords": "0, 0, 0",
+      "ban_date": "2025/10/20",
+      "ban_reason": "Griefing - TNT spam in spawn area",
+      "uuid": "7a3d5c8e-12b4-4f9a-8d2c-1e7f9a6b3c5d"
+    },
+    {
+      "name": "hackerman123",
+      "real_name": "Unknown",
+      "position": "Banned",
+      "course": "N/A",
+      "year": "N/A",
+      "join_date": "2025/10/25",
+      "coords": "0, 0, 0",
+      "ban_date": "2025/10/25",
+      "ban_reason": "Hacking - Using X-ray and fly hacks",
+      "uuid": "4e9b2a1f-8c7d-4b3e-9f1a-2d6e8c4b7a9f"
+    },
+    {
+      "name": "ToxicPlayer99",
+      "real_name": "Michael B.",
+      "position": "Banned",
+      "course": "BS Business Ad",
+      "year": "2nd Year",
+      "join_date": "2025/10/28",
+      "coords": "0, 0, 0",
+      "ban_date": "2025/11/02",
+      "ban_reason": "Harassment - Repeated verbal abuse toward players",
+      "uuid": "9c4b7e1a-3f8d-4c2e-9b6a-1d5f8c3e7a2b"
+    },
+    {
+      "name": "LavaGriefer",
+      "real_name": "Unknown",
+      "position": "Banned",
+      "course": "N/A",
+      "year": "N/A",
+      "join_date": "2025/11/01",
+      "coords": "0, 0, 0",
+      "ban_date": "2025/11/01",
+      "ban_reason": "Griefing - Lava griefing in community farm",
+      "uuid": "2f8c6a9d-4b1e-4c7a-9f3d-8e5b7c1a4d9f"
+    },
+    {
+      "name": "AutoClicker420",
+      "real_name": "Carlos M.",
+      "position": "Banned",
+      "course": "BS Psychology",
+      "year": "1st Year",
+      "join_date": "2025/11/03",
+      "coords": "0, 0, 0",
+      "ban_date": "2025/11/05",
+      "ban_reason": "Cheating - Auto-clicker and killaura",
+      "uuid": "6d9e3b8a-2c7f-4d1e-9b4a-7f3e9c1d8a6b"
+    },
+    {
+      "name": "SpamBot3000",
+      "real_name": "Unknown",
+      "position": "Banned",
+      "course": "N/A",
+      "year": "N/A",
+      "join_date": "2025/11/06",
+      "coords": "0, 0, 0",
+      "ban_date": "2025/11/06",
+      "ban_reason": "Spam - Chat flooding and advertising",
+      "uuid": "8a4c9e2f-7b1d-4c3e-9f6a-2d8e5c7b4a1f"
+    },
+    {
+      "name": "ThiefMaster",
+      "real_name": "Ramon S.",
+      "position": "Banned",
+      "course": "BS Accounting",
+      "year": "3rd Year",
+      "join_date": "2025/11/07",
+      "coords": "0, 0, 0",
+      "ban_date": "2025/11/09",
+      "ban_reason": "Theft - Stealing from unlocked chests repeatedly",
+      "uuid": "3c7f9e1d-4b8a-4c2e-9f5d-7e3b9c1a6d8f"
+    },
+    {
+      "name": "DupeExploit",
+      "real_name": "Unknown",
+      "position": "Banned",
+      "course": "N/A",
+      "year": "N/A",
+      "join_date": "2025/11/08",
+      "coords": "0, 0, 0",
+      "ban_date": "2025/11/08",
+      "ban_reason": "Exploiting - Item duplication glitch abuse",
+      "uuid": "5e9b2c8f-7a1d-4c3e-9f4a-1d8e6c3b7a9f"
+    },
+    {
+      "name": "RacistTroll88",
+      "real_name": "Unknown",
+      "position": "Banned",
+      "course": "N/A",
+      "year": "N/A",
+      "join_date": "2025/11/09",
+      "coords": "0, 0, 0",
+      "ban_date": "2025/11/09",
+      "ban_reason": "Hate speech - Racist remarks in chat",
+      "uuid": "9f3e7c1a-8d2b-4c5e-9f6a-2d7e4c8b1a3f"
     }
   ]
 }
